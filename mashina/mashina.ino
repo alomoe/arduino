@@ -61,7 +61,7 @@ if (right==true){
     stop=false;
   }
 }
-if (left==true){
+else if (left==true){
   if (ldist<25){
     ford=true;
     left=false;
