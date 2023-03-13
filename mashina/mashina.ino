@@ -9,6 +9,7 @@
 
 const int irSensorPin = A0;
 long duration, fdist;
+float irSensorValue, ldist;
 
 bool stop=false;
 bool ford=false;
@@ -39,8 +40,8 @@ Serial.print(fdist);
 Serial.println(" cm");
 
 
-float irSensorValue = analogRead(irSensorPin)*0.0048828125;  
-float ldist = 32*pow(irSensorValue,-1.10);
+irSensorValue = analogRead(irSensorPin)*0.0048828125;  
+ldist = 32*pow(irSensorValue,-1.10);
 Serial.print("ldist: ");
 Serial.print(ldist);
 Serial.println(" cm");
